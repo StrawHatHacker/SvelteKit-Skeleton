@@ -1,2 +1,27 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts" context="module">
+
+</script>
+
+<script lang="ts">
+    import '../styles/index.scss';
+</script>
+
+<svelte:head>
+    <title>Home</title>
+</svelte:head>
+
+<header>
+
+</header>
+
+<main>
+
+</main>
+
+<footer>
+
+</footer>
+
+<style>
+    
+</style>
