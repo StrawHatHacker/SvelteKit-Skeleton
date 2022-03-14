@@ -1,0 +1,36 @@
+{
+	"include": [
+		"src/**/*.d.ts",
+		"src/**/*.js",
+		"src/**/*.ts",
+		"src/**/*.svelte"
+	],
+	"compilerOptions": {
+		"moduleResolution": "node",
+		"module": "esnext",
+		"lib": [
+			"es2020",
+			"DOM"
+		],
+		"target": "es2020",
+		"importsNotUsedAsValues": "error",
+		"preserveValueImports": true,
+		"resolveJsonModule": true,
+		"sourceMap": true,
+		"esModuleInterop": true,
+		"skipLibCheck": false,
+		"forceConsistentCasingInFileNames": true,
+		"baseUrl": ".",
+		"allowJs": true,
+		"checkJs": true,
+		"paths": {
+			"$lib": [
+				"src/lib"
+			],
+			"$lib/*": [
+				"src/lib/*"
+			]
+		}
+	},
+	"extends": "./.svelte-kit/tsconfig.json"
+}
