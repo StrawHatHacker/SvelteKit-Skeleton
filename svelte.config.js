@@ -12,9 +12,7 @@ const config = {
 		vite: {
 			css: {
 				preprocessorOptions: {
-					scss: {
-
-					}
+					scss: {}
 				}
 			},
 			build: {
