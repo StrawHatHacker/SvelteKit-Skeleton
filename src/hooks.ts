@@ -1,6 +1,9 @@
 import { fetchSession } from '$lib/utils/sessionHandler';
 import type { Handle, GetSession } from '@sveltejs/kit';
 import cookie from 'cookie';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 export const handle: Handle | unknown = async ({ event, resolve }) => {
     const cookies = cookie.parse(event.request.headers.get('cookie') || '');

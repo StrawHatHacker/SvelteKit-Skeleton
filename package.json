@@ -35,6 +35,7 @@
 	"type": "module",
 	"dependencies": {
 		"cookie": "^0.4.2",
+		"dotenv": "^16.0.0",
 		"sass": "^1.49.9"
 	}
 }
