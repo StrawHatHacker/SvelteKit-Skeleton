@@ -1,3 +1,14 @@
+<!-- 
+	Usage 
+	
+	<script>let showPopup = false;</script>
+	<button on:click={() => showPopup = true}>Show</button>
+    <button on:click={() => showPopup = false}>Hide</button>
+	<Popup show={showPopup} on:change={() => (showPopup = !showPopup)}>
+		html here
+	</Popup>
+
+-->
 <script lang="ts">
 	import { center } from '../utils/animations';
 	import { createEventDispatcher } from 'svelte';
