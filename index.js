@@ -6,6 +6,9 @@
 import { handler } from './build/handler.js';
 import robots from 'express-robots-txt';
 import express from 'express';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
 
@@ -19,9 +22,8 @@ app.use(robots({
 }));
 
 // app.use('/static', express.static('Path to static folder'));
-
 // app.use(express.json({ limit: '50mb' }));
-// app.use(express.urlencoded({ limit: '50mb' }));
+app.use(express.urlencoded({ limit: '50mb' }));
 
 // Let SvelteKit handle everything else, including serving prerendered pages and static assets
 app.use(handler);
