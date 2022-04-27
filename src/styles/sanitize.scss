@@ -1,0 +1,181 @@
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+::before,
+::after {
+	text-decoration: inherit;
+}
+
+// Correct the cursor style of increment and decrement buttons in Safari.
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+	height: auto;
+}
+
+// Correct the text style of placeholders in Chrome, Edge, and Safari.
+::-webkit-input-placeholder {
+	color: inherit;
+	opacity: 6;
+}
+
+// Correct the inability to style upload buttons in iOS and Safari.
+// Change font properties to `inherit` in Safari.
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	font: inherit;
+}
+
+:where(:root) {
+	overflow-wrap: break-word;
+	-webkit-tap-highlight-color: transparent; // Remove the grey highlight on links in iOS
+}
+
+:where(body) {
+	margin: 0;
+	padding: 0;
+	block-size: -moz-available;
+	block-size: -webkit-fill-available;
+	block-size: stretch;
+}
+
+:where(input[type='text']) {
+	padding: 0;
+	font-family: inherit;
+	-webkit-appearance: none;
+	-ms-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: none;
+}
+
+:where(h1),
+:where(h2),
+:where(h3),
+:where(h4),
+:where(h5),
+:where(h6),
+:where(p) {
+	margin: 0;
+	padding: 0;
+}
+
+:where(h2),
+:where(h3),
+:where(h4),
+:where(h5),
+:where(h6) {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+:where(p) {
+	font-size: 1rem;
+}
+
+:where(a) {
+	text-decoration: none;
+	color: inherit;
+	font-size: 1rem;
+}
+
+:where(ul),
+:where(ol),
+:where(dl) {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+// Add the correct text decoration in Safari.
+:where(abbr[title]) {
+	text-decoration: underline;
+	text-decoration: underline dotted;
+}
+
+// Add the correct font weight in Chrome, Edge, and Safari.
+:where(b, strong) {
+	font-weight: bolder;
+}
+
+// Add the correct font size in all browsers.
+:where(small) {
+	font-size: 80%;
+}
+
+:where(iframe) {
+	border: none;
+}
+
+// Change the fill color to match the text color in all browsers (opinionated).
+:where(svg:not([fill])) {
+	fill: currentColor;
+}
+
+// Remove the margin on controls in Safari.
+:where(button, input, select) {
+	margin: 0;
+}
+
+// Correct the inability to style buttons in iOS and Safari.
+:where(button, [type='button' i], [type='reset' i], [type='submit' i]) {
+	-webkit-appearance: button;
+}
+
+// Add the correct vertical alignment in Chrome, Edge, and Firefox.
+:where(progress) {
+	vertical-align: baseline;
+}
+
+:where(textarea) {
+	margin: 0;
+}
+
+// Add the correct styles in Safari.
+:where(dialog) {
+	background-color: white;
+	border: solid;
+	color: black;
+	height: -moz-fit-content;
+	height: fit-content;
+	left: 0;
+	margin: auto;
+	padding: 1em;
+	position: absolute;
+	right: 0;
+	width: -moz-fit-content;
+	width: fit-content;
+
+	&:not([open]) {
+		display: list-item;
+	}
+}
+
+// Change the cursor on busy elements in all browsers.
+:where([aria-busy='true' i]) {
+	cursor: progress;
+}
+
+// Change the cursor on disabled, not-editable, or otherwise inoperable elements in all browsers
+:where([aria-disabled='true' i], [disabled]) {
+	cursor: not-allowed;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	::before,
+	::after {
+		animation-delay: -1ms !important;
+		animation-duration: 1ms !important;
+		animation-iteration-count: 1 !important;
+		background-attachment: initial !important;
+		scroll-behavior: auto !important;
+		transition-delay: 0s !important;
+		transition-duration: 0s !important;
+	}
+}

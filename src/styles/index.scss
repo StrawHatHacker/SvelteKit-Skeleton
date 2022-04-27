@@ -1,3 +1,9 @@
 @import './sanitize.scss';
 @import './globals.scss';
 @import './mixins.scss';
+
+body {
+	//font-family: 'Coustard', serif;
+	font-size: 20px;
+	min-height: 100vh;
+}
