@@ -4,37 +4,37 @@ import { UserModel } from '$lib/models/user';
 import cookie from 'cookie';
 
 interface IBody {
-    email: string;
-    password: string;
+	email: string;
+	password: string;
 }
 
 export async function post({ request }) {
+	const body: IBody = await request.json();
 
-    const body: IBody = await request.json();
+	const User = await UserModel.findOne({
+		email: body.email,
+		password: hashPassword(body.password)
+	});
 
-    const User = await UserModel.findOne({
-        email: body.email,
-        password: hashPassword(body.password)
-    });
+	if (!User)
+		return {
+			status: 400,
+			body: { error: 'Invalid email or password' }
+		};
 
-    if (!User) return {
-        status: 400,
-        body: { error: 'Invalid email or password' }
-    }
+	const newSessionId = createSession(User._id);
 
-    const newSessionId = createSession(User._id);
-
-    return {
-        status: 200,
-        body: {},
-        headers: {
-            'Set-Cookie': cookie.serialize('session_id', newSessionId, {
-                path: '/',
-                httpOnly: true,
-                sameSite: 'strict',
-                // secure: process.env.NODE_ENV === 'production',
-                maxAge: 60 * 60 * 24 * 7, // one week
-            }),
-        }
-    };
+	return {
+		status: 200,
+		body: {},
+		headers: {
+			'Set-Cookie': cookie.serialize('session_id', newSessionId, {
+				path: '/',
+				httpOnly: true,
+				sameSite: 'strict',
+				// secure: process.env.NODE_ENV === 'production',
+				maxAge: 60 * 60 * 24 * 7 // one week
+			})
+		}
+	};
 }

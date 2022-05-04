@@ -2,18 +2,18 @@ import { deleteSession } from '$lib/utils/sessionHandler';
 import cookie from 'cookie';
 
 export async function post({ request }) {
-    const cookies = cookie.parse(request.headers.get('cookie') || '');
+	const cookies = cookie.parse(request.headers.get('cookie') || '');
 
-    deleteSession(cookies.session_id);
+	deleteSession(cookies.session_id);
 
-    return {
-        status: 200,
-        body: {},
-        headers: {
-            'Set-Cookie': cookie.serialize('session_id', '', {
-                path: '/',
-                expires: new Date(),
-            })
-        }
-    };
+	return {
+		status: 200,
+		body: {},
+		headers: {
+			'Set-Cookie': cookie.serialize('session_id', '', {
+				path: '/',
+				expires: new Date()
+			})
+		}
+	};
 }

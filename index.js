@@ -16,10 +16,12 @@ app.set('trust proxy', true);
 app.disable('x-powered-by'); // Hide "powered by express"
 
 // Allow indexing by all search engines
-app.use(robots({
-    UserAgent: '*',
-    Disallow: ''
-}));
+app.use(
+	robots({
+		UserAgent: '*',
+		Disallow: ''
+	})
+);
 
 // app.use('/static', express.static('Path to static folder'));
 // app.use(express.json({ limit: '50mb' }));
