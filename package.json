@@ -38,6 +38,7 @@
 		"dotenv": "^16.0.0",
 		"express": "^4.17.3",
 		"express-robots-txt": "^1.0.0",
+		"mongoose": "^6.3.2",
 		"sass": "^1.49.9"
 	}
 }
