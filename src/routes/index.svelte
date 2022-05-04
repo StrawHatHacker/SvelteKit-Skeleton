@@ -8,8 +8,16 @@
 
 	const login = async () => {
 		const res: Iresponse<{}> = await post('/api/v1/user/login', {
-			email: 'abc',
+			email: 'StrawHatHacker@gmail.com',
 			password: '123'
+		});
+	};
+
+	const register = async () => {
+		const res: Iresponse<{}> = await post('/api/v1/user/register', {
+			email: 'StrawHatHacker@gmail.com',
+			password: '123',
+			username: 'StrawHatHacker'
 		});
 	};
 
@@ -26,9 +34,10 @@
 
 <main>
 	<button on:click={login}>Login</button>
+	<button on:click={register}>register</button>
 	<button on:click={logout}>Logout</button>
 	<button on:click={() => (window.location.href = '/protected')}>Goto protected</button>
-	<input type="text" placeholder="Placeholder"/>
+	<input type="text" placeholder="Placeholder" />
 	<input type="radio" />
 	<h1>H1</h1>
 	<h2>H2</h2>
@@ -53,7 +62,7 @@
 	</dl>
 	<progress id="upload" max="100" value="70"> 70% </progress>
 	<textarea name="textarea" id="textarea" cols="30" rows="10">Hi I'm a textarea :)</textarea>
-	<dialog>ok</dialog>	
+	<dialog>ok</dialog>
 </main>
 
 <footer />

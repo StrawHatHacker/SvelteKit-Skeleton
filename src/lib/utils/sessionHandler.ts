@@ -3,10 +3,10 @@ import crypto from 'crypto';
 
 const sessionUsers = new Map<TSessionID, TDatabaseID>();
 
-export function createSession(id: TDatabaseID): TSessionID {
-    const randomID = crypto.randomBytes(16).toString('hex');
+export function createSession(userID: TDatabaseID): TSessionID {
+    const randomID = crypto.randomBytes(32).toString('hex');
 
-    sessionUsers.set(randomID, id);
+    sessionUsers.set(randomID, userID.toString());
 
     return randomID;
 }
