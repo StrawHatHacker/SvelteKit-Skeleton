@@ -1,7 +1,7 @@
 /*
     Set up so it can run behind NGINX
 
-    Statements in comments are optional, just in case you want to use them.
+    Commented statements are optional, just in case you want to use them.
 */
 import { handler } from './build/handler.js';
 import robots from 'express-robots-txt';

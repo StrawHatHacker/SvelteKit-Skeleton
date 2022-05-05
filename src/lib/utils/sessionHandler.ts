@@ -1,4 +1,4 @@
-import type { TSessionID, TDatabaseID } from '../../interfaces';
+import type { TSessionID, TDatabaseID } from 'src/interfaces';
 import crypto from 'crypto';
 
 const sessionUsers = new Map<TSessionID, TDatabaseID>();
