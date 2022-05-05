@@ -10,8 +10,9 @@ export async function post({ request }) {
 		status: 200,
 		body: {},
 		headers: {
-			'Set-Cookie': cookie.serialize('session_id', '', {
+			'Set-Cookie': cookie.serialize('session_id', null, {
 				path: '/',
+				sameSite: 'strict',
 				expires: new Date()
 			})
 		}

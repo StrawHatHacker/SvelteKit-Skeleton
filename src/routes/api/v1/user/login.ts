@@ -32,7 +32,7 @@ export async function post({ request }) {
 				path: '/',
 				httpOnly: true,
 				sameSite: 'strict',
-				// secure: process.env.NODE_ENV === 'production',
+				secure: true,
 				maxAge: 60 * 60 * 24 * 7 // one week
 			})
 		}
