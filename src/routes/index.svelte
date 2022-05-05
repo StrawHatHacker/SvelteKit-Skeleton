@@ -37,6 +37,9 @@
 	<button on:click={register}>register</button>
 	<button on:click={logout}>Logout</button>
 	<button on:click={() => (window.location.href = '/protected')}>Goto protected</button>
+	<button on:click={() => (window.location.href = '/protectedFolder/inProtectedFolder')}
+		>Goto protected folder</button
+	>
 	<input type="text" placeholder="Placeholder" />
 	<input type="radio" />
 	<h1>H1</h1>
