@@ -1,7 +1,7 @@
 /*
-    Set up so it can run behind NGINX
+	Set up so it can run behind NGINX
 
-    Commented statements are optional, just in case you want to use them.
+	Commented statements are optional, just in case you want to use them.
 */
 import { handler } from './build/handler.js';
 import robots from 'express-robots-txt';
@@ -25,7 +25,7 @@ app.use(
 
 // app.use('/static', express.static('Path to static folder'));
 // app.use(express.json({ limit: '50mb' }));
-app.use(express.urlencoded({ limit: '50mb' }));
+app.use(express.urlencoded({ limit: '50mb', extended: true }));
 
 // Let SvelteKit handle everything else, including serving prerendered pages and static assets
 app.use(handler);
