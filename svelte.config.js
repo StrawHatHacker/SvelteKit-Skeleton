@@ -17,6 +17,9 @@ const config = {
 			},
 			build: {
 				target: 'esnext'
+			},
+			test: {
+				environment: 'jsdom',
 			}
 		}
 	}
