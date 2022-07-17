@@ -8,8 +8,6 @@
 
 -->
 <script lang="ts">
-	import { start_hydrating } from 'svelte/internal';
-
 	let minutes = 0;
 	let seconds = 0;
 	let timer = null;
