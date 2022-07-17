@@ -1,6 +1,3 @@
-<script lang="ts" context="module">
-</script>
-
 <script lang="ts">
 	import { post } from '$lib/utils/requestMethods';
 	import type { Iresponse } from 'src/interfaces';
