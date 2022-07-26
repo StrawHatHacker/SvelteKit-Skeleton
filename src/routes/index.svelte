@@ -46,6 +46,7 @@
 	<h5>H5</h5>
 	<h6>H6</h6>
 	<p>p</p>
+	<p class="p-5 text-xl text-gray-400 font-extrabold">Tailwind styled paragraph</p>
 	<a href="/test">Link to /test</a>
 	<ul>
 		<li>First unordered list element</li>

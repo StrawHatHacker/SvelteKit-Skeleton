@@ -1,3 +1,7 @@
+// @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import './sanitize.scss';
 @import './globals.scss';
 @import './mixins.scss';
