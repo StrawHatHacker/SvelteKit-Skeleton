@@ -9,19 +9,6 @@ const config = {
 
 	kit: {
 		adapter: adapter({ out: 'build' }),
-		vite: {
-			css: {
-				preprocessorOptions: {
-					scss: {}
-				}
-			},
-			build: {
-				target: 'esnext'
-			},
-			test: {
-				environment: 'jsdom',
-			}
-		}
 	}
 };
 

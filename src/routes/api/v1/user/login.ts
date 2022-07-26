@@ -8,7 +8,7 @@ interface IBody {
 	password: string;
 }
 
-export async function post({ request }) {
+export async function POST({ request }) {
 	const body: IBody = await request.json();
 
 	const User = await UserModel.findOne({

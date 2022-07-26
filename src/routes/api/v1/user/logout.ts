@@ -1,7 +1,7 @@
 import { deleteSession } from '$lib/utils/sessionHandler';
 import cookie from 'cookie';
 
-export async function post({ request }) {
+export async function POST({ request }) {
 	const cookies = cookie.parse(request.headers.get('cookie') || '');
 
 	deleteSession(cookies.session_id);
