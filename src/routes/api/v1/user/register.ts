@@ -4,7 +4,6 @@ import hashPassword from '$lib/utils/hashPassword';
 interface IBody {
 	email: string;
 	password: string;
-	username: string;
 }
 
 export async function POST({ request }) {
@@ -16,13 +15,7 @@ export async function POST({ request }) {
 			body: { error: 'Email already exists' }
 		};
 
-	if (await UserModel.getUserByUsername(body.username))
-		return {
-			status: 400,
-			body: { error: 'Username already exists' }
-		};
-
-	await UserModel.createUser(body.email, hashPassword(body.password), body.username);
+	await UserModel.createUser(body.email, hashPassword(body.password));
 
 	return {
 		status: 200,

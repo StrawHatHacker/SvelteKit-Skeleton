@@ -3,7 +3,7 @@
 		if (!user?.id)
 			return {
 				status: 302,
-				redirect: '/'
+				redirect: '/login'
 			};
 
 		return {
@@ -19,6 +19,3 @@
 </script>
 
 <slot />
-
-<style lang="scss">
-</style>

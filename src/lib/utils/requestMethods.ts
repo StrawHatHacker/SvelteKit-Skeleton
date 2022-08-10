@@ -9,5 +9,5 @@ export async function post(endpoint: string, data?: unknown) {
 		}
 	});
 
-	return { status: r.status, body: await r.json() };
+	return { status: r.status, body: await r.json(), ok: r.ok };
 }

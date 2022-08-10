@@ -7,9 +7,12 @@ export type TDatabaseID = ObjectId | string;
 
 export type TSessionID = string;
 
+export type LoginRes = Record<never, never>
+
 export interface Iresponse<T> {
-	status: 200 | 400 | 500 | number;
+	status: number;
 	body: Either<T, { error: string }>;
+	ok: boolean;
 }
 
 export interface IUser {

@@ -1,37 +1,6 @@
-<script lang="ts">
-	import { post } from '$lib/utils/requestMethods';
-	import type { Iresponse } from 'src/interfaces';
-	import '../styles/index.scss';
-
-	const login = async () => {
-		const res: Iresponse<{}> = await post('/api/v1/user/login', {
-			email: 'StrawHatHacker@gmail.com',
-			password: '123'
-		});
-	};
-
-	const register = async () => {
-		const res: Iresponse<{}> = await post('/api/v1/user/register', {
-			email: 'StrawHatHacker@gmail.com',
-			password: '123',
-			username: 'StrawHatHacker'
-		});
-	};
-
-	const logout = async () => {
-		const res: Iresponse<{}> = await post('/api/v1/user/logout');
-	};
-</script>
-
-<svelte:head>
-	<title>Home</title>
-</svelte:head>
-
-<header />
-
 <main>
-	<button on:click={login}>Login</button>
-	<button on:click={register}>register</button>
+	<button on:click={() => (window.location.href = '/login')}>Login</button>
+	<button on:click={() => (window.location.href = '/register')}>register</button>
 	<button on:click={logout}>Logout</button>
 	<button on:click={() => (window.location.href = '/protected')}>Goto protected</button>
 	<button on:click={() => (window.location.href = '/protectedFolder/inProtectedFolder')}

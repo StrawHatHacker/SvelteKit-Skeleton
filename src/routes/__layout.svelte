@@ -1,3 +1,7 @@
+<script lang="ts">
+	import '../styles/index.scss';
+</script>
+
 <svelte:head>
 	<title>Skeleton 🦴💀🦴</title>
 	<meta name="description" content="" />

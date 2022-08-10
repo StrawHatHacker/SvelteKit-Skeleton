@@ -2,9 +2,8 @@ import type { IUser } from 'src/interfaces';
 import mongoose, { Model } from 'mongoose';
 
 interface UserModel extends Model<IUser> {
-	createUser(a: string, b: string, c: string): Promise<IUser>;
+	createUser(a: string, b: string): Promise<IUser>;
 	getUserByEmail(a: string): Promise<IUser>;
-	getUserByUsername(a: string): Promise<IUser>;
 }
 
 const schema = new mongoose.Schema<IUser>(
@@ -17,11 +16,6 @@ const schema = new mongoose.Schema<IUser>(
 		password: {
 			type: String,
 			required: true
-		},
-		username: {
-			type: String,
-			required: true,
-			unique: true
 		}
 	},
 	{
@@ -33,16 +27,12 @@ const schema = new mongoose.Schema<IUser>(
 	}
 );
 
-schema.statics.createUser = async function (email: string, password: string, username: string) {
-	await this.create({ email, password, username });
+schema.statics.createUser = async function (email: string, password: string) {
+	await this.create({ email, password });
 };
 
 schema.statics.getUserByEmail = async function (email: string) {
 	return await this.findOne({ email }).lean();
-};
-
-schema.statics.getUserByUsername = async function (username: string) {
-	return await this.findOne({ username }).lean();
 };
 
 export const UserModel =
