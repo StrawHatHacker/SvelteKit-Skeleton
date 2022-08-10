@@ -25,9 +25,7 @@ export const handle: Handle | unknown = async ({ event, resolve }) => {
 };
 
 export const getSession: GetSession | unknown = (request) => {
-	if (request?.locals?.user) {
-		return request.locals.user;
-	}
+	if (request?.locals?.user) return request.locals.user;
 
 	return {};
 };

@@ -16,7 +16,6 @@
 	import type { ISessionUser } from 'src/interfaces';
 
 	export let user: ISessionUser;
-	console.log(user);
 </script>
 
 <slot />
