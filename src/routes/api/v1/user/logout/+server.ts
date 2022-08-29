@@ -1,3 +1,4 @@
+import { json } from '@sveltejs/kit';
 import { deleteSession } from '$lib/utils/sessionHandler';
 import cookie from 'cookie';
 
@@ -6,9 +7,7 @@ export async function POST({ request }) {
 
 	deleteSession(cookies.session_id);
 
-	return {
-		status: 200,
-		body: {},
+	return json({}, {
 		headers: {
 			'Set-Cookie': cookie.serialize('session_id', null, {
 				path: '/',
@@ -16,5 +15,5 @@ export async function POST({ request }) {
 				expires: new Date()
 			})
 		}
-	};
+	});
 }

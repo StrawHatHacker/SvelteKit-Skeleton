@@ -6,9 +6,6 @@
 import { handler } from './build/handler.js';
 import robots from 'express-robots-txt';
 import express from 'express';
-import dotenv from 'dotenv';
-
-dotenv.config();
 
 const app = express();
 
@@ -30,5 +27,5 @@ app.use(express.urlencoded({ limit: '50mb', extended: true }));
 // Let SvelteKit handle everything else, including serving prerendered pages and static assets
 app.use(handler);
 
-const port = process.env.port || 3000;
+const port = 3000;
 app.listen(port, () => console.log('App listening on port ' + port));

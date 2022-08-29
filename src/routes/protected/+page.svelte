@@ -1,23 +1,9 @@
-<script context="module" lang="ts">
-	export async function load({ session: user }) {
-		if (!user?.id)
-			return {
-				status: 302,
-				redirect: '/login'
-			};
-
-		return {
-			props: { user }
-		};
-	}
-</script>
-
 <script lang="ts">
-	import type { ISessionUser } from 'src/interfaces';
 	import { post } from '$lib/utils/requestMethods';
 	import type { Iresponse } from 'src/interfaces';
 
-	export let user: ISessionUser;
+	// export let data;
+	console.log('3. This is executed on the client');
 
 	const logout = async () => {
 		const res: Iresponse<{}> = await post('/api/v1/user/logout');
@@ -28,3 +14,4 @@
 
 <div>Example of a protected route</div>
 <button on:click={logout}>Logout</button>
+<a href="/protected/3" sveltekit:reload>3</a>

@@ -28,7 +28,7 @@
 						src="https://dummyimage.com/200x200"
 					/>
 					<div class="flex-grow sm:pl-8">
-						<h3 class="title-font font-medium text-lg text-gray-900">Λεωνίδας Παπαδάκης</h3>
+						<h3 class="title-font font-medium text-lg text-gray-900">Λεωνίδας</h3>
 						<h4 class="text-gray-500 mb-3">Fullstack Developer / Team leader</h4>
 						<p class="mb-4">
 							DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.
@@ -52,7 +52,7 @@
 						src="https://dummyimage.com/201x201"
 					/>
 					<div class="flex-grow sm:pl-8">
-						<h3 class="title-font font-medium text-lg text-gray-900">Παναγιώτης Νταής</h3>
+						<h3 class="title-font font-medium text-lg text-gray-900">Παναγιώτης</h3>
 						<h4 class="text-gray-500 mb-3">Web Developer</h4>
 						<p class="mb-4">
 							DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.
@@ -76,7 +76,7 @@
 						src="https://dummyimage.com/204x204"
 					/>
 					<div class="flex-grow sm:pl-8">
-						<h3 class="title-font font-medium text-lg text-gray-900">Θεοδόσης Τάρλας</h3>
+						<h3 class="title-font font-medium text-lg text-gray-900">Θεοδόσης</h3>
 						<h4 class="text-gray-500 mb-3">Backend Developer</h4>
 						<p class="mb-4">
 							DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.

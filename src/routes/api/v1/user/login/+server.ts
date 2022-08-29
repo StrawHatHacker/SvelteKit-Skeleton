@@ -1,3 +1,4 @@
+import { json } from '@sveltejs/kit';
 import { createSession } from '$lib/utils/sessionHandler';
 import hashPassword from '$lib/utils/hashPassword';
 import { UserModel } from '$lib/models/user';
@@ -17,16 +18,13 @@ export async function POST({ request }) {
 	});
 
 	if (!User)
-		return {
-			status: 400,
-			body: { error: 'Invalid email or password' }
-		};
+		return json({ error: 'Invalid email or password' }, {
+			status: 400
+		});
 
 	const newSessionId = createSession(User._id);
 
-	return {
-		status: 200,
-		body: {},
+	return json({}, {
 		headers: {
 			'Set-Cookie': cookie.serialize('session_id', newSessionId, {
 				path: '/',
@@ -36,5 +34,5 @@ export async function POST({ request }) {
 				maxAge: 60 * 60 * 24 * 7 // one week
 			})
 		}
-	};
+	});
 }
