@@ -1,15 +1,11 @@
 <script lang="ts">
-	import { goto, invalidateAll } from '$app/navigation';
-
-	import { post } from '$lib/utils/requestMethods';
+	import { goto } from '$app/navigation';
 	import type { Iresponse } from 'src/interfaces';
-
-	// export let data;
+	import { post } from '$lib/utils/requestMethods';
 	
 	const logout = async () => {
 		const res: Iresponse<{}> = await post('/api/v1/user/logout');
-		await invalidateAll();
-		goto('/')
+		goto('/');
 	};
 </script>
 
