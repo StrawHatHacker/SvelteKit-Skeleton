@@ -4,7 +4,7 @@
 		"moduleResolution": "node",
 		"module": "esnext",
 		"lib": ["es2020", "DOM"],
-		"target": "es2020",
+		"target": "es2022",
 		"importsNotUsedAsValues": "error",
 		"preserveValueImports": true,
 		"resolveJsonModule": true,
