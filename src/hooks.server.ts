@@ -4,7 +4,8 @@ import type { Handle } from '@sveltejs/kit';
 import mongoose from 'mongoose';
 import cookie from 'cookie';
 
-await mongoose.connect(MONGO_URI, {});
+mongoose.set('strictQuery', false);
+await mongoose.connect(MONGO_URI);
 
 export const handle: Handle | unknown = async ({ event, resolve }) => {
 	const cookies = cookie.parse(event.request.headers.get('cookie') || '');
