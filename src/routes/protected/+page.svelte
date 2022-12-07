@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import type { Iresponse } from 'src/interfaces';
+	import type { TResponse } from 'src/interfaces';
 	import { post } from '$lib/utils/requestMethods';
-	
+
 	const logout = async () => {
-		const res: Iresponse<{}> = await post('/api/v1/user/logout');
+		const res: TResponse<{}> = await post('/api/v1/user/logout');
 		goto('/');
 	};
 </script>

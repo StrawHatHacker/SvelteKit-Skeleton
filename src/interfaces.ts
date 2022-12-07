@@ -9,19 +9,15 @@ export type TSessionID = string;
 
 export type LoginRes = Record<never, never>
 
-export interface Iresponse<T> {
+export type TResponse<T> = {
 	status: number;
 	body: Either<T, { error: string }>;
 	ok: boolean;
 }
 
-export interface IUser {
+export type TUser = {
 	_id: TDatabaseID;
 	email: string;
 	password: string;
 	username: string;
-}
-
-export interface ISessionUser {
-	id: TDatabaseID;
 }

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Iresponse, LoginRes } from 'src/interfaces';
+	import type { TResponse, LoginRes } from 'src/interfaces';
 	import { post } from '$lib/utils/requestMethods';
 	import { fade } from 'svelte/transition';
 	import { sineIn } from 'svelte/easing';
@@ -10,7 +10,7 @@
 	let timeOuts: NodeJS.Timeout[] = [];
 
 	async function submit() {
-		const res: Iresponse<LoginRes> = await post('/api/v1/user/login', { email, password });
+		const res: TResponse<LoginRes> = await post('/api/v1/user/login', { email, password });
 
 		if (res.ok) window.location.href = '/protected';
 
