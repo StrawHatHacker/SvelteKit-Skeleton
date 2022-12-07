@@ -1,13 +1,11 @@
-import { extractFromSvelteConfig, } from 'vitest-svelte-kit';
+import { defineConfig } from 'vite'
+import { svelte } from '@sveltejs/vite-plugin-svelte'
 
-// TODO Since sveltekit requires a vite, tests need to be hacked to work.
-// TODO When vitest fixes this, update code!
-export default extractFromSvelteConfig({
-    kit: {
-        vite: {
-            test: {
-                environment: 'jsdom',
-            }
-        },
-    }
-});
+export default defineConfig({
+  plugins: [
+    svelte({ hot: !process.env.VITEST }),
+  ],
+  test: {
+    environment: 'jsdom',
+  },
+})
