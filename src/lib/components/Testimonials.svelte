@@ -27,7 +27,7 @@
 						try-hard pabst authentic iceland.
 					</p>
 					<div class="inline-flex items-center">
-						<UserFavoriteAlt size={40} class="text-pink-500"/>
+						<UserFavoriteAlt size={40} class="text-pink-500" />
 						<span class="flex-grow flex flex-col pl-4">
 							<span class="title-font font-medium text-gray-900">Holden Caulfield</span>
 							<span class="text-gray-500 text-sm">UI DEVELOPER</span>
@@ -44,7 +44,7 @@
 						try-hard pabst authentic iceland.
 					</p>
 					<div class="inline-flex items-center">
-						<UserFavoriteAltFilled size={40} class="text-pink-500"/>
+						<UserFavoriteAltFilled size={40} class="text-pink-500" />
 						<span class="flex-grow flex flex-col pl-4">
 							<span class="title-font font-medium text-gray-900">Alper Kamu</span>
 							<span class="text-gray-500 text-sm">DESIGNER</span>

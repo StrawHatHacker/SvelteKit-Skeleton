@@ -6,10 +6,10 @@ declare namespace App {
 	interface Locals {
 		session: {
 			id: string;
-		}
+		};
 	}
 
 	interface PrivateEnv {
-		MONGO_URI: string
+		MONGO_URI: string;
 	}
 }

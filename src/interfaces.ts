@@ -7,17 +7,17 @@ export type TDatabaseID = ObjectId | string;
 
 export type TSessionID = string;
 
-export type LoginRes = Record<never, never>
+export type LoginRes = Record<never, never>;
 
 export type TResponse<T> = {
 	status: number;
 	body: Either<T, { error: string }>;
 	ok: boolean;
-}
+};
 
 export type TUser = {
 	_id: TDatabaseID;
 	email: string;
 	password: string;
 	username: string;
-}
+};

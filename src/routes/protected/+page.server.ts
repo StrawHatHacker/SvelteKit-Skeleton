@@ -6,4 +6,4 @@ export const load: PageServerLoad = async ({ locals }) => {
 
 	// Passing data to +page.ts
 	return {};
-}
+};
