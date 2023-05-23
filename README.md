@@ -1,6 +1,6 @@
 This is an **opinionated boiletplate skeleton** for a new SvelteKit project.
 
-Out of the box you get **TypeScript**, **SCSS**, **Tailwind** support, **node-adapter** for SSR builds, basic **authentication example**, **mongoose** and working **tests**.
+Out of the box you get **TypeScript**, **SCSS**, **Tailwind** support, **node-adapter** for SSR builds, basic **authentication example**, **mongoose** implementation and working **tests**.
 
 ## Wait a minute...
 
