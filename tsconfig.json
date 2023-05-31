@@ -5,8 +5,6 @@
 		"module": "esnext",
 		"lib": ["es2020", "DOM"],
 		"target": "es2022",
-		"importsNotUsedAsValues": "error",
-		"preserveValueImports": true,
 		"resolveJsonModule": true,
 		"sourceMap": true,
 		"esModuleInterop": true,
