@@ -1,7 +1,7 @@
 import type { TUser } from 'src/interfaces';
-import mongoose, { Model } from 'mongoose';
+import mongoose from 'mongoose';
 
-interface UserModel extends Model<TUser> {
+interface UserModelStatics {
 	createUser(a: string, b: string): Promise<TUser>;
 	getUserByEmail(a: string): Promise<TUser>;
 }
@@ -35,6 +35,5 @@ schema.statics.getUserByEmail = async function (email: string) {
 	return await this.findOne({ email }).lean();
 };
 
-export const UserModel =
-	(mongoose.models.user as unknown as UserModel) ||
-	mongoose.model<TUser, UserModel>('user', schema);
+const model = mongoose.model<TUser, UserModelStatics>('user', schema);
+export const UserModel = (mongoose.models.user as unknown as typeof model) || model;
