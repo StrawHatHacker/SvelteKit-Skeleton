@@ -1,4 +1,4 @@
-FROM node:16 as build
+FROM node:lts as build
 WORKDIR /app
 EXPOSE 3000
 COPY . ./
