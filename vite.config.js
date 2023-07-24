@@ -6,9 +6,6 @@ const config = {
 	build: {
 		target: 'esnext'
 	},
-	define: {
-		global: {}
-	}
 };
 
 export default config;
