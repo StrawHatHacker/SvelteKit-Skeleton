@@ -50,7 +50,5 @@
 
 <div>{parsedTime.minutes}:{parsedTime.seconds}</div>
 
-<style lang="scss">
-	// div {
-	// }
+<style>
 </style>

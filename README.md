@@ -1,6 +1,6 @@
 This is an **opinionated boiletplate skeleton** for a new SvelteKit project.
 
-Out of the box you get **TypeScript**, **SCSS**, **Tailwind** support, **node-adapter** for SSR builds, basic **authentication example**, **mongoose** implementation and working **tests**.
+Out of the box you get **TypeScript**, **Tailwind** support, **node-adapter** for SSR builds, basic **authentication example**, **mongoose** implementation and working **tests**.
 
 ## Wait a minute...
 
@@ -32,9 +32,11 @@ docker run -p 3000:3000 svelte-app
 
 ##### Why is progress element not positioned correctly?
 
+- All can be fixed by editing `src/styles/sanitize.css`. Or you can delete it!
+
 ##### Where can I change the reduced motion options?
 
-- All can be fixed by editing `src/styles/sanitize.scss`. Or you can delete it!
+- In `src/styles/index.css`.
 
 ##### Just cloned and runned it but Log in and Sign up are not working
 

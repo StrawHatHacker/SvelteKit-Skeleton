@@ -1,5 +1,6 @@
 <script lang="ts">
-	import '../styles/index.scss';
+	// import '../styles/sanitize.css';
+	import '../styles/index.css';
 </script>
 
 <svelte:head>

@@ -24,6 +24,7 @@
 </script>
 
 {#if show}
+	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<div
 		class="shade"
 		transition:fade={{ duration, delay }}
@@ -35,9 +36,8 @@
 	</div>
 {/if}
 
-<style lang="scss">
-	@use '../../styles/colors.scss' as *;
-	@use '../../styles/mixins.scss' as *;
+<style>
+	
 
 	.content {
 		width: max-content;
@@ -45,19 +45,19 @@
 		overflow: hidden;
 		position: fixed;
 		z-index: 11;
-		// background-color: $main-black;
+		background-color: black;
 		opacity: 1;
 		padding: 1rem;
 		border-radius: 0.5rem;
-		// border: 3px solid $background-black;
-		// box-shadow: 3px 3px 5px $main-black;
+		border: 3px solid black;
+		box-shadow: 3px 3px 5px black;
 	}
 
 	.shade {
 		position: fixed;
 		z-index: 10;
 		inset: 0;
-		// background-color: $main-black;
+		background-color: black;
 		opacity: 0.7;
 	}
 
