@@ -38,6 +38,6 @@ docker run -p 3000:3000 svelte-app
 
 - In `src/styles/index.css`.
 
-##### Just cloned and runned it but Log in and Sign up are not working
+##### Just cloned and tried to run it but Log in and Sign up are not working
 
 - Of course they are not working. You need a v4.4 or higher mongoDB deployment and connect to it, [see here](https://github.com/StrawHatHacker/SvelteKit-Skeleton#wait-a-minute).
