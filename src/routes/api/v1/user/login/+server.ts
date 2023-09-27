@@ -29,8 +29,6 @@ export async function POST({ request }) {
 			'Set-Cookie': cookie.serialize('session_id', newSessionId, {
 				path: '/',
 				httpOnly: true,
-				sameSite: 'strict',
-				secure: true,
 				maxAge: 60 * 60 * 24 * 7 // one week
 			})
 		}
