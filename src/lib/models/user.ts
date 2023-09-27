@@ -35,5 +35,7 @@ schema.statics.getUserByEmail = async function (email: string) {
 	return await this.findOne({ email }).lean();
 };
 
-const model = mongoose.model<TUser, UserModelStatics>('user', schema);
-export const UserModel = (mongoose.models.user as unknown as typeof model) || model;
+const model = mongoose.model('user', schema);
+const UserModel = (mongoose.models.user || model) as unknown as typeof model & UserModelStatics;
+
+export { UserModel };
