@@ -7,8 +7,8 @@ export const load: PageServerLoad = async ({ locals }) => {
 	// If it is valid hooks.server.ts will give us a "session.id" below.
 	// If it is not present here that means the user isn't authenticated,
 	// and we can handle what happens with that information here.
-	if (!locals.session?.id) throw redirect(302, '/login');
+	if (!locals.session?.id) throw redirect(307, '/login');
 
 	// Passing data to +page.ts
-	return {};
+	return { session: locals.session.id };
 };

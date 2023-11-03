@@ -6,7 +6,7 @@ declare namespace App {
 	interface Locals {
 		session: {
 			id: string;
-		};
+		} | null;
 	}
 
 	interface PrivateEnv {
