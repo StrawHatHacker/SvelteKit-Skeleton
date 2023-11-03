@@ -1,24 +1,28 @@
 import { fetchSession } from '$lib/utils/sessionHandler';
 import { MONGO_URI } from '$env/static/private';
 import type { Handle } from '@sveltejs/kit';
+import { themes } from '$lib/utils/themes';
 import mongoose from 'mongoose';
-import cookie from 'cookie';
 
 mongoose.set('strictQuery', false);
 await mongoose.connect(MONGO_URI);
 
-export const handle: Handle | unknown = async ({ event, resolve }) => {
-	const cookies = cookie.parse(event.request.headers.get('cookie') || '');
-
-	if (cookies['session_id']) {
-		const session = fetchSession(cookies['session_id']);
-
-		if (session) {
-			event.locals.session = { id: cookies['session_id'] };
-			return await resolve(event);
-		}
-	}
+export const handle = (async ({ event, resolve }) => {
+	const sessionID = event.cookies.get('session_id');;
+	const theme = event.cookies.get('theme');
 
 	event.locals.session = null;
+
+	if (sessionID) {
+		const session = fetchSession(sessionID);
+		if (session)
+			event.locals.session = { id: sessionID };
+	}
+
+	if (theme && themes.includes(theme)) return await resolve(event, {
+		transformPageChunk: ({ html }) =>
+			html.replace('data-theme=""', `data-theme="${theme}"`)
+	})
+
 	return await resolve(event);
-};
+}) satisfies Handle;

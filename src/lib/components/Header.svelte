@@ -1,6 +1,7 @@
 <script>
 	import ArrowRight from 'carbon-icons-svelte/lib/ArrowRight.svelte';
 	import LogoDiscord from 'carbon-icons-svelte/lib/LogoDiscord.svelte';
+	import ThemeSelect from './ThemeSelect.svelte';
 </script>
 
 <section aria-labelledby="title">
@@ -12,6 +13,7 @@
 					Skeleton Business
 				</h1>
 			</a>
+			<ThemeSelect />
 			<nav class="md:ml-auto flex flex-wrap items-center justify-center font-medium">
 				<a class="mr-5 text-indigo-600 hover:text-indigo-400 text-base py-2" href="/">About</a>
 				<a class="mr-5 text-indigo-600 hover:text-indigo-400 text-base py-2" href="/">Pricing</a>
