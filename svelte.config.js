@@ -1,7 +1,6 @@
 import adapter from '@sveltejs/adapter-node';
 import preprocess from 'svelte-preprocess';
 
-
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
@@ -9,7 +8,10 @@ const config = {
 	preprocess: [preprocess({ postcss: true })],
 
 	kit: {
-		adapter: adapter({ out: 'build' })
+		adapter: adapter({ out: 'build' }),
+		alias: {
+			"lib/*": "src/lib/*"
+		}
 	}
 };
 

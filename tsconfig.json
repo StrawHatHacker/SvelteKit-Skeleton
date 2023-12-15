@@ -1,9 +1,17 @@
 {
-	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte"],
+	"include": [
+		"src/**/*.d.ts",
+		"src/**/*.js",
+		"src/**/*.ts",
+		"src/**/*.svelte"
+	],
 	"compilerOptions": {
-		"moduleResolution": "node",
+		"moduleResolution": "bundler",
 		"module": "esnext",
-		"lib": ["es2022", "DOM"],
+		"lib": [
+			"es2022",
+			"DOM"
+		],
 		"target": "es2022",
 		"resolveJsonModule": true,
 		"sourceMap": true,
@@ -13,8 +21,9 @@
 		"baseUrl": ".",
 		"checkJs": true,
 		"paths": {
-			"$lib": ["src/lib"],
-			"$lib/*": ["src/lib/*"]
+			"$lib/*": [
+				"src/lib/*"
+			]
 		}
 	},
 	"extends": "./.svelte-kit/tsconfig.json"
