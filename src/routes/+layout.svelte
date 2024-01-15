@@ -1,6 +1,7 @@
 <script lang="ts">
 	// import '../styles/sanitize.css';
 	import '../styles/index.css';
+	import "@fortawesome/fontawesome-free/css/all.min.css"
 </script>
 
 <svelte:head>
