@@ -18,13 +18,13 @@
 		"esModuleInterop": true,
 		"skipLibCheck": false,
 		"forceConsistentCasingInFileNames": true,
-		"baseUrl": ".",
+		// "baseUrl": ".",
 		"checkJs": true,
-		"paths": {
-			"$lib/*": [
-				"src/lib/*"
-			]
-		}
+		// "paths": {
+		// 	"$lib/*": [
+		// 		"src/lib/*"
+		// 	]
+		// }
 	},
 	"extends": "./.svelte-kit/tsconfig.json"
 }
