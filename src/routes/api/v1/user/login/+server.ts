@@ -3,6 +3,7 @@ import { createSession } from '$lib/utils/sessionHandler';
 import hashPassword from '$lib/utils/hashPassword';
 import { UserModel } from '$lib/models/user';
 import cookie from 'cookie';
+import { PUBLIC_ENVIRONMENT } from '$env/static/public';
 
 interface IBody {
 	email: string;
@@ -27,8 +28,11 @@ export async function POST({ request }) {
 	return json({}, {
 		headers: {
 			'Set-Cookie': cookie.serialize('session_id', newSessionId, {
-				path: '/',
 				httpOnly: true,
+				sameSite: 'lax',
+				secure: false,
+				path: '/',
+				domain: PUBLIC_ENVIRONMENT === 'DEV' ? '' : "DOMAIN_HERE",
 				maxAge: 60 * 60 * 24 * 7 // one week
 			})
 		}
