@@ -13,6 +13,10 @@ declare global {
 		interface PrivateEnv {
 			MONGO_URI: string;
 		}
+
+		interface PublicEnv {
+			ENVIRONMENT: 'DEV' | 'PROD';
+		}
 	}
 }
 
